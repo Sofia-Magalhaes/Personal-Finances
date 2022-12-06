@@ -19,7 +19,11 @@ const App = () => {
     setFilteredList(filterListByMonth(list, currentMonth));
   }, [list, currentMonth]);
 
-  const handleMonthChange = (newMonth: string) =>{
+  useEffect(() => {
+
+  }, [filteredList]);
+
+  const handleMonthChange = (newMonth: string) => {
     setCurrentMonth(newMonth);
   }
 
@@ -39,7 +43,7 @@ const App = () => {
 
         {/* Area de inserção */}
 
-        
+
         <TableArea list={filteredList} />
 
       </C.Body>
